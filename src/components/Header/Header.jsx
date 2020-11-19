@@ -3,7 +3,7 @@ import clsx from "clsx"
 import Drawer from "@material-ui/core/Drawer"
 import List from "@material-ui/core/List"
 import Divider from "@material-ui/core/Divider"
-import { mainListItems, secondaryListItems } from "./NavList/listItems"
+import { mainListItems, secondaryListItems } from "../NavList/listItems"
 import { makeStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
@@ -27,6 +27,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+    fontSize: 24,
+    color: theme.palette.primary.light
   },
   AppBar: {
     background: "transparent",
@@ -60,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    backgroundColor: "#ffc107",
+    backgroundColor: theme.palette.primary.dark,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
