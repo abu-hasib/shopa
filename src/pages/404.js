@@ -11,7 +11,7 @@ export default function error() {
     var pix
     var WIDTH
     var HEIGHT
-    var flickerInterval
+    // var flickerInterval
 
     var init = function () {
       canvas = document.getElementById("canvas")
@@ -23,7 +23,7 @@ export default function error() {
       ctx.fill()
       imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT)
       pix = imgData.data
-      flickerInterval = setInterval(flickering, 30)
+      setInterval(flickering, 30)
     }
 
     var flickering = function () {
@@ -56,6 +56,7 @@ export default function error() {
         <img src="http://ademilter.com/caps.png" alt="" />
       </div>
       <canvas id="canvas"></canvas>
+      {}
     </>
   )
 }
